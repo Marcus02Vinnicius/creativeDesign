@@ -17,8 +17,8 @@
     outline: none;
     font-family: 'Bellota Text', cursive;
     font-weight: 400;
-    background-color: var(--main-color);
-    color: var(--white-color);
+    /* background-color: var(--main-color);
+    color: var(--white-color); */
 }
 
 html{
@@ -34,15 +34,20 @@ html{
     position: relative;
 }
 
+body{
+    overflow: hidden;
+}
+
+
 .floating-bg{
-    width: 40vw;
-    height: 40vh;
+    width: 150vw;
+    height: 150vw;
     background-color: var(--pink-color);
     position: absolute;
-    top: 15%;
-    left: calc(50% - 35rem);
+    top: -125vw;
+    left: calc(50% - 75vw);
     border-radius: 45%;
-    animation: rotate 30s infinite;
+    animation: rotate 40s infinite;
 }
 
 .floating-bg::before{
@@ -53,8 +58,8 @@ html{
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 40%;
-    animation: rotate 30s infinite;
+    border-radius: 45%;
+    animation: rotate 40s infinite;
 }
 
 @keyframes rotate{
@@ -66,5 +71,61 @@ html{
         transform: rotate(360deg);
     }
 }
+
+
+.navbar{
+    position: relative;
+    z-index: 20;
+    top: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.navbar-link{
+    font-family: 'Itim';
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--pink-color);
+    width: 1.5rem;
+    word-wrap: break-word;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.navbar-link:hover{
+    width: 15rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all 2.5s;
+}
+
+
+.section-1-heading{
+    font-size: 4rem;
+    font-family: "Monoton", cursive;
+    position: absolute;
+    top: 20vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 0.3rem 0.3rem 0.3rem #888;
+    color: var(--white-color);
+    text-align: center;
+    opacity: 0.9;
+}
+
+.logo{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo i{
+    font-size: 15rem;
+    color: var(--pink-color);
+    text-shadow: 0.1rem 0.1rem 0.2rem #ddd, -0.1rem -0.1rem -0.2rem #ddd; 
+
+}
+
 
 /* End Section 1 */
